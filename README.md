@@ -4,7 +4,11 @@ PacketLens is a Windows desktop packet analyzer designed to make network traffic
 
 PacketLens performs analysis locally. It is an educational investigation tool, not an intrusion-detection system and not proof that activity is benign or malicious.
 
-Current local compliance candidate: **0.8.4** (not published)
+Current source release: **v0.8.4**
+
+The public repository includes the application source code, documentation,
+automated tests, build configuration, and synthetic demonstration screenshots.
+No Windows executable, installer, or portable ZIP has been publicly released.
 
 ## Features
 
@@ -41,8 +45,9 @@ All screenshots use deterministic synthetic demonstration data and do not repres
 
 ## Windows installation from source
 
-PacketLens does not currently offer a public prebuilt Windows executable. This
-repository is being prepared for source-only publication.
+PacketLens is currently distributed as source code. To use it, run the project
+from source or create a local build using the documented build configuration.
+No prebuilt Windows executable is available from this repository.
 
 Requirements:
 
@@ -116,12 +121,12 @@ Only capture traffic or discover devices on networks you own or are explicitly a
 - Encrypted traffic generally exposes metadata rather than decrypted application content.
 - Detection rules are deliberately conservative heuristics and cannot guarantee identification of malicious activity.
 - Port numbers and traffic volume do not prove application identity or intent.
-- This release candidate was tested on Windows 11 x64. Windows 10 x64 is intended but has not been clean-machine verified for this release candidate; non-Windows systems and 32-bit Windows are unsupported.
-- The executable is unsigned and may trigger Windows reputation warnings. Do not disable Windows security protections to run it.
+- PacketLens v0.8.4 was tested on Windows 11 x64. Windows 10 x64 is intended but has not been clean-machine verified; non-Windows systems and 32-bit Windows are unsupported.
+- Locally built executables are unsigned and may trigger Windows reputation warnings. Do not disable Windows security protections to run them.
 
 ## Development
 
-Python 3.11 or newer is recommended for source development. The 0.8.4 compliance candidate is built and tested with 64-bit Python 3.14.10.
+Python 3.11 or newer is recommended for source development. PacketLens v0.8.4 is built and tested with 64-bit Python 3.14.10.
 
 ```powershell
 py -m venv .venv
